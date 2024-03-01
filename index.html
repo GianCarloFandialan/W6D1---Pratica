@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6D1 - Pratica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="left-section">
+            <div class="icon-container">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <!--Inserisco il contenitore in cui inserire il logo-->
+        <div class="center-section">
+            <span class="site-title">FindYourJob.com</span> 
+        </div>
+
+        <!--Inserisco il contenitore in inserire le icone poste in alto a destra-->
+        <div class="right-section">
+            <div class="icon-container">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa-solid fa-user" id="userIcon"></i>
+            </div>
+            <div class="login-div display-none" id="loginDiv">
+                <i class="fa-solid fa-right-to-bracket" class="login-icon"></i> login
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!--Inerisco il contenitore del contenuto principale della pagina-->
+        <div class="main-content-container">
+
+            <!--Inserisco un titolo-->
+            <h1>Find Your Job</h1>
+    
+            <div class="form-container">
+        
+                <!--Nella pagina HTML, inserisci 2 input di tipo testo (uno per la location e uno per il titolo lavorativo, ricordati di diversificarli con un id) e un bottone con valore “cerca”-->
+                <form>
+                        
+                    <div class="input-instructions">
+                        Insert a <strong>location</strong> or a 
+                       <strong>title</strong>  to do the Research
+                    </div>
+    
+                    <div class="input-container input-instructions">
+                        <label for="location">
+                            Location
+                        </label>
+                        <input type="text" id="location" name="location" placeholder="Insert the location here">
+                        <label for="title">
+                            Title
+                        </label>
+                        <input type="text" id="title" name="title" placeholder="Insert the title here">
+
+                        <label for="button"></label>
+                        <input type="button" id="button" value="search">
+                    </div>
+                    
+                    <!--Inserisco un div conentente i vari risultati possibili della ricerca-->
+                    <div class="results-container">
+                        <ul class="display-block" id="resultsList">
+                        </ul>
+                        <div class="display-none" id="noResultsAlert">
+                            No results match your search
+                        </div>
+                        <div class="display-none insertTitle">
+                            Insert a location or a title!
+                        </div>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+
+    </main>
+ 
+    <!--Inserisco un footer in cui ci sono informazioni riguardo il sito-->
+    <footer>
+        <div class="footer-content gray">
+            © Copyright FindYourJob, All Rights Reserved | Company n°: 13666969 | Developed and Designed by Gian Carlo Fandialan
+        </div>
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/5fb0eb8b3b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

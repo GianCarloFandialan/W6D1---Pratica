@@ -1,0 +1,179 @@
+/*Azzerro utto in modo tale che sia più facile usare il css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Do dei parametri di default al body come ad esempio il font*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(img/pexels-marc-mueller-380769.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+/*Stilizzo l'header*/
+header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+}
+
+/*Stilizzo il nome del sito*/
+.site-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-left: 7vw;
+}
+
+/*Stilizzo le varie icone*/
+
+.right-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon-container{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.icon-container{
+    margin-right: 1.5vw;
+}
+
+.icon-container:hover{
+    color: black;
+}
+
+.main-content-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Ora stilizzo il contenitore del contenuto principale*/
+main{
+    padding: 15vh 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.main-content-container{
+    margin-top: 10vh;
+    background-color: rgba(0,0,0,0.4);
+    width: 70vw;
+    border:5px solid white;
+    border-radius: 20px;
+}
+
+/*Ora stiizzo il contenuto*/
+h1{
+    text-align: center;
+    font-size: 5rem;
+    color: white;    
+    padding-top: 5vh;
+}
+
+form {
+    color: white;
+    padding-top: 5vh;
+}
+
+.input-instructions{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.input-container{
+    padding-top: 5vh;
+}
+
+#location, #button, #title{
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    background-color: unset;
+    border: 2px solid white;
+    color: white;
+}
+
+::placeholder{
+    color: white;
+}
+
+#button{
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+/*Finito di stilizzare la parte del form ora tocca ai risultati di questa ricerca*/
+
+.results-container{
+    font-size: 1.3rem;
+    padding-left: 10px;
+    padding-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+il{
+    display: block;
+    margin-top: 2.5vh;
+    cursor: pointer;
+}
+
+/*Stilizzo la finestrina di login che apparare premendo l'icona user*/
+.login-div{
+    position: absolute;
+    top: 9vh;
+    right: 3vw;
+    background-color: white;
+    padding: 1.2rem 1.5rem; 
+    justify-content: space-around;
+    border-radius: 1rem;
+    border: 1px solid gray;
+}
+
+.login-icon{
+    margin-right: 10px;
+}
+
+/*Stilizzo il footer*/ 
+footer{
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    z-index: -20;
+    height: 10vh;
+    font-size: 1.1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Queste sono delle classi importanti per il funzionamento della pagina e per lo svlogimento dell'esercizio, le ho poste per ultimo solo per una comodità mia nel non sballare il vero obbiettivo cioè quello di renderlo funzionale*/
+
+.display-none{
+    display: none;
+}
+
+.display-block{
+    display: block;
+}
+
+/*EXTRA*/
+.display-flex{
+    display: flex;
+}

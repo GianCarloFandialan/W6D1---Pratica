@@ -69,6 +69,7 @@ main{
     justify-content: center;
     background-color: rgba(0,0,0,0.3);
     position: relative;
+    margin-bottom: 10vh;
 }
 
 .main-content-container{
@@ -80,16 +81,20 @@ main{
 }
 
 /*Ora stiizzo il contenuto*/
-h1{
+.main-title{
     text-align: center;
     font-size: 5rem;
     color: white;    
     padding-top: 5vh;
 }
 
-form {
+.input-instructions{
     color: white;
     padding-top: 5vh;
+}
+
+form {
+    color: white;
 }
 
 .input-instructions{
@@ -136,7 +141,7 @@ il{
     cursor: pointer;
 }
 
-/*Stilizzo la finestrina di login che apparare premendo l'icona user*/
+/*Stilizzo la finestrina di login inutile che appare premendo l'icona user*/
 .login-div{
     position: absolute;
     top: 9vh;

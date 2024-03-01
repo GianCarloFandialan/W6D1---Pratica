@@ -44,18 +44,17 @@
         <div class="main-content-container">
 
             <!--Inserisco un titolo-->
-            <h1>Find Your Job</h1>
+            <h1 class="main-title">Find Your Job</h1>
     
             <div class="form-container">
         
+                <div class="input-instructions">
+                    Insert a <strong>location</strong> or a <strong>title</strong>  to do the Research
+                </div>
+
                 <!--Nella pagina HTML, inserisci 2 input di tipo testo (uno per la location e uno per il titolo lavorativo, ricordati di diversificarli con un id) e un bottone con valore “cerca”-->
                 <form>
-                        
-                    <div class="input-instructions">
-                        Insert a <strong>location</strong> or a 
-                       <strong>title</strong>  to do the Research
-                    </div>
-    
+                           
                     <div class="input-container input-instructions">
                         <label for="location">
                             Location
@@ -79,7 +78,7 @@
                     <div class="display-none" id="noResultsAlert">
                         No results match your search
                     </div>
-                    <div class="display-none insertTitle">
+                    <div class="display-none" id="insertLocationOrTitle">
                         Insert a location or a title!
                     </div>
                 </div>

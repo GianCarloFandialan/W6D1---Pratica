@@ -152,6 +152,7 @@ let titleInput = document.getElementById("title");
 let submitButton = document.getElementById("button");
 let resultsList = document.getElementById("resultsList")
 let noResultsAlert = document.getElementById("noResultsAlert")
+let insertLocationOrTitle = document.getElementById("insertLocationOrTitle")
 
 submitButton.addEventListener("click", () => {
   
@@ -161,18 +162,16 @@ submitButton.addEventListener("click", () => {
   */
   resultsList.innerHTML = '';
   noResultsAlert.classList.remove("display-block")
-  for (let i = 0; i < document.getElementsByClassName("insertTitle").length; i++) {
-    document.getElementsByClassName("insertTitle")[i].classList.remove("display-block")
-  }
+  insertLocationOrTitle.classList.remove("display-block")
+  
 
   //Uso un if per verificare che effetivamente sia stato inserito qualcosa come input altrimenti ne richiedo almeno uno all'utente
   if (locationInput.value === "" && titleInput.value === "") {
 
     //Nel caso non snon ci siano input applico la classe che fa apparire il div contente l'avviso di inserirne almeno uno
-    for (let i = 0; i < document.getElementsByClassName("insertTitle").length; i++) {
-      document.getElementsByClassName("insertTitle")[i].classList.add("display-block")
-    }
+    insertLocationOrTitle.classList.add("display-block")
   } else {
+
     //Al click del bottone, il codice deve raccogliere i valori dei due input e darli in pasto alla funzione che hai creato nella parte 1. 
     let inputsResult = research(locationInput.value, titleInput.value);
 
@@ -184,7 +183,7 @@ submitButton.addEventListener("click", () => {
     } 
     else {
 
-      //Aggiungo un item alla lista per ogni elemento dell'array "inputsResult"
+      //Aggiungo un item alla lista per ogni elemento dell'array "inputsResult" grazie anche alla funzionalità dei backtick
       inputsResult.result.forEach(function (result) {
         let newIL = document.createElement('il');
         newIL.textContent = `Title: ${result.title} - Location: ${result.location}`
@@ -195,7 +194,7 @@ submitButton.addEventListener("click", () => {
   
 });
 
-//EXTRA
+//EXTRA INUTILE
 let userIcon = document.getElementById("userIcon");
 let loginDiv = document.getElementById("loginDiv")
 

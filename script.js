@@ -150,7 +150,6 @@ function research(location, title) {
 let locationInput = document.getElementById("location");
 let titleInput = document.getElementById("title");
 let submitButton = document.getElementById("button");
-let body = document.getElementsByTagName("body")
 let resultsList = document.getElementById("resultsList")
 let noResultsAlert = document.getElementById("noResultsAlert")
 

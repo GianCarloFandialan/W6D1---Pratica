@@ -135,6 +135,10 @@ form {
     color: white;
 }
 
+.results-count{
+    font-size: 1rem;
+}
+
 il{
     display: block;
     margin-top: 2.5vh;

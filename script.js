@@ -153,22 +153,24 @@ let submitButton = document.getElementById("button");
 let resultsList = document.getElementById("resultsList")
 let noResultsAlert = document.getElementById("noResultsAlert")
 let insertLocationOrTitle = document.getElementById("insertLocationOrTitle")
+let resultsCount = document.getElementById("resultsCount")
 
 submitButton.addEventListener("click", () => {
   
   /*
   -Resetto la lista ad ogni click sul bottone in modo tale che non mi riaggiunga di nuovo i risultati della funzione alla lista dei risultati all'infinito
-  -Rimuovo la classe che mi fa comparire l'avviso che non ci sono risultati corrispondenti
+  -Rimuovo la classe che mi fa comparire le varie notifiche
   */
   resultsList.innerHTML = '';
   noResultsAlert.classList.remove("display-block")
   insertLocationOrTitle.classList.remove("display-block")
+  resultsCount.classList.remove("display-block")
   
 
   //Uso un if per verificare che effetivamente sia stato inserito qualcosa come input altrimenti ne richiedo almeno uno all'utente
   if (locationInput.value === "" && titleInput.value === "") {
 
-    //Nel caso non snon ci siano input applico la classe che fa apparire il div contente l'avviso di inserirne almeno uno
+    //Nel caso non ci siano input applico la classe che fa apparire il div contente l'avviso di inserirne almeno uno
     insertLocationOrTitle.classList.add("display-block")
   } else {
 
@@ -182,6 +184,16 @@ submitButton.addEventListener("click", () => {
       noResultsAlert.classList.add("display-block")
     } 
     else {
+
+      //Faccio apparire la notifica di quanti risultano ci siano tramite l'aggiunta della classe diplay-block
+      resultsCount.classList.add("display-block")
+
+      //Faccio un if in modo tale che sia grammaticalmente corretto quando appare un solo risultato, non una cosa fondamentale ma una precisione che mi sentivo di fare
+      if (inputsResult.count > 1) {
+        resultsCount.innerHTML= `Approximately ${inputsResult.count} results`
+      } else {
+        resultsCount.innerHTML= `There is only ${inputsResult.count} result`
+      }
 
       //Aggiungo un item alla lista per ogni elemento dell'array "inputsResult" grazie anche alla funzionalità dei backtick
       inputsResult.result.forEach(function (result) {
